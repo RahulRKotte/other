@@ -1,0 +1,30 @@
+// Header.scss
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; // Add some horizontal padding
+    background-color: inherit; // To inherit from the parent theme
+    color: inherit; // To inherit text color from the theme
+  
+    &__app-name {
+      font-size: 1.5rem; // Set your app name font size
+      font-weight: bold; // Bold app name
+    }
+  
+    &__profile {
+      position: relative; // Position relative for the dropdown
+  
+      &-icon {
+        font-size: 1.5rem; // Profile icon size
+        cursor: pointer; // Change cursor to pointer
+        transition: color 0.3s;
+  
+        &:hover {
+          color: #0077b6; // Change color on hover
+        }
+      }
+    }
+  }
+  

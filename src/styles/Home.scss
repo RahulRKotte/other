@@ -1,0 +1,10 @@
+/* Home.scss */
+.home {
+    display: flex;
+  }
+  
+  .home__content {
+    flex: 1; /* This will make the content take up the remaining space */
+    padding: 20px; /* Adjust as needed */
+  }
+  

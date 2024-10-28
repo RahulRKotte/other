@@ -1,0 +1,83 @@
+// Sidebar.scss
+
+.sidebar {
+  height: 80vh;
+
+  &__logo {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+
+  &__menu {
+    .ant-menu-item {
+      font-size: 1rem;
+      color: inherit; // Use inherit to get the color from the sidebar
+
+      &:hover {
+        background-color: inherit;
+      }
+
+      &.ant-menu-item-selected {
+        background-color: inherit;
+      }
+    }
+  }
+
+  &__toggle {
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: inherit;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+
+  &.dark {
+    background-color: #001529;
+    color: #ffffff;
+
+    .ant-menu-item {
+      color: #bdbdbd;
+      &:hover {
+        background-color: #334155;
+      }
+
+      &.ant-menu-item-selected {
+        background-color: #0077b6;
+      }
+    }
+
+    &__toggle {
+      color: #bdbdbd;
+    }
+  }
+
+  &.light {
+    background-color: #ffffff;
+    color: #333;
+
+    .ant-menu-item {
+      color: #333;
+
+      &:hover {
+        background-color: #e0e0e0;
+      }
+
+      &.ant-menu-item-selected {
+        background-color: #cfd8dc;
+      }
+    }
+
+    &__toggle {
+      color: #333;
+    }
+  }
+}

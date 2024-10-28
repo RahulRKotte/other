@@ -1,0 +1,43 @@
+// Footer.scss
+
+.footer {
+  padding: 0.5rem;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  border-top: 1px solid;
+
+  &__text {
+    font-size: 0.875rem;
+    color: inherit;
+    margin: 0.25rem;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: lighten(#0077b6, 10%);
+      }
+    }
+  }
+
+  &.dark {
+    background-color: #001529;
+    color: #bdbdbd;
+    border-color: #333;
+
+    &__text {
+      color: #bdbdbd; // Ensure text is visible in dark mode
+    }
+  }
+
+  &.light {
+    background-color: #ffffff;
+    color: #333;
+    border-color: #ddd;
+
+    &__text {
+      color: #333;
+    }
+  }
+}

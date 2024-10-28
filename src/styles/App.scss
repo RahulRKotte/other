@@ -1,0 +1,23 @@
+// App.scss
+
+.app {
+    display: flex;
+    transition: background-color 0.3s;
+  
+    &.dark {
+      background-color: #0f172a;
+      color: #ffffff;
+    }
+  
+    &.light {
+      background-color: #f9fafb;
+      color: #333333;
+    }
+  
+    &__content {
+      flex-grow: 1;
+      padding: 2rem;
+      min-height: 100vh;
+    }
+  }
+  
