@@ -21,6 +21,7 @@
 
 
 .ticket {
+  position: relative; /* Make it a positioning context */
   background: #ffffff;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -70,8 +71,10 @@
   }
 
   .ticket-status {
-    margin-top: 12px;
-
+    position: absolute;
+    bottom: 16px; /* Position it at the bottom */
+    right: 16px; /* Align it to the right */
+    
     .status {
       padding: 4px 12px;
       border-radius: 12px;
