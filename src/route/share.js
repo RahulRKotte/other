@@ -1,70 +1,106 @@
-import React from 'react';
-import './TrackingPage.scss';
+.tracking-page {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: #f4f7fc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-const TrackingPage = () => {
-  const ticketId = '12345';
-  const status = 'Open';
-  const assignedTo = 'John Doe';
-  const system = 'CRM';
-  const raisedBy = 'Jane Smith';
-  const raisedOn = '2024-11-12';
-  const age = '3 days';
+  .ticket-info {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 
-  const comments = [
-    {
-      author: 'John Doe',
-      time: '2024-11-14 10:30 AM',
-      text: 'The issue is under investigation. We will update you shortly.'
-    },
-    {
-      author: 'Jane Smith',
-      time: '2024-11-13 03:00 PM',
-      text: 'The issue has been raised and is being prioritized.'
+    .ticket-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+
+      .ticket-id {
+        font-size: 22px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .ticket-status {
+        font-size: 16px;
+        color: #555;
+        .status-open {
+          color: #f0ad4e;
+          font-weight: bold;
+        }
+
+        .status-in-progress {
+          color: #5bc0de;
+          font-weight: bold;
+        }
+
+        .status-resolved {
+          color: #5cb85c;
+          font-weight: bold;
+        }
+      }
     }
-  ];
 
-  return (
-    <div className="tracking-page">
-      <div className="ticket-info">
-        <div className="ticket-header">
-          <h2 className="ticket-id">Ticket #{ticketId}</h2>
-          <p className="ticket-status">
-            Status: <span className={`status-${status.toLowerCase()}`}>{status}</span>
-          </p>
-        </div>
-        <div className="details">
-          <div className="detail">
-            <strong>Assigned To:</strong> {assignedTo}
-          </div>
-          <div className="detail">
-            <strong>System:</strong> {system}
-          </div>
-          <div className="detail">
-            <strong>Raised By:</strong> {raisedBy}
-          </div>
-          <div className="detail">
-            <strong>Raised On:</strong> {raisedOn}
-          </div>
-          <div className="detail">
-            <strong>Age of Ticket:</strong> {age}
-          </div>
-        </div>
-      </div>
+    .details {
+      font-size: 16px;
+      color: #555;
 
-      <div className="comments-section">
-        <h3>Comments</h3>
-        {comments.map((comment, index) => (
-          <div className="comment" key={index}>
-            <div className="comment-header">
-              <span className="comment-author">{comment.author}</span>
-              <span className="comment-time">{comment.time}</span>
-            </div>
-            <p className="comment-text">{comment.text}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
+      .detail {
+        margin-bottom: 10px;
+        strong {
+          color: #333;
+        }
+      }
+    }
+  }
 
-export default TrackingPage;
+  .comments-section {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+
+    h3 {
+      margin-bottom: 15px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .comment {
+      margin-bottom: 20px;
+      padding: 15px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+
+      .comment-header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        color: #777;
+
+        .comment-author {
+          font-weight: bold;
+        }
+
+        .comment-time {
+          color: #aaa;
+        }
+      }
+
+      .comment-text {
+        margin-top: 10px;
+        font-size: 16px;
+        color: #333;
+      }
+    }
+  }
+}
